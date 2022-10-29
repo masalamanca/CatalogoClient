@@ -1,0 +1,25 @@
+<h3> <a routerLink = "/Inicio" > Volver al menu Inicio</a></h3>
+    <h1>Catalogo</h1>
+    <div>
+    </div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Tipo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let catalogo of catalogos">
+      <td>{{catalogo.Id_Catalogo}}</td>
+      <td>{{catalogo.Nombre_Catalogo}}</td>
+      <td>{{catalogo.Tipo_Catalogo}}</td>
+      <td>
+        <button (click)="getProductsByCatalogId(catalogo.Id_Catalogo)">Productos</button>
+        <button>Editar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
