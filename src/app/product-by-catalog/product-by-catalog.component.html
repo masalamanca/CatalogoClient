@@ -1,0 +1,24 @@
+<div>
+  <div class="header">
+    <button mat-button (click)="goBack()">Volver</button>
+    <h1>Productos del catalogo {{ catalog }}</h1>
+  </div>
+
+  <table mat-table [dataSource]="products" style="width: 100%">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.ID }}</td>
+    </ng-container>
+    <ng-container matColumnDef="product">
+      <th mat-header-cell *matHeaderCellDef>Producto</th>
+      <td mat-cell *matCellDef="let element">{{ element.Producto }}</td>
+    </ng-container>
+    <ng-container matColumnDef="dimensions">
+      <th mat-header-cell *matHeaderCellDef>Dimensiones</th>
+      <td mat-cell *matCellDef="let element">{{ element.Dimensiones }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
