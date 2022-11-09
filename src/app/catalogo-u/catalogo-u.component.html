@@ -1,6 +1,6 @@
 <div class="header">
   <h1>Catalogo</h1>
-  <button mat-raised-button>Crear</button>
+  <button mat-raised-button (click)="goToCreate()">Crear</button>
 </div>
 
 <table mat-table [dataSource]="catalogos" style="width: 100%">

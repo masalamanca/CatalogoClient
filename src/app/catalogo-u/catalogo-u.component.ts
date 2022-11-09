@@ -44,4 +44,8 @@ export class CatalogoUComponent implements OnInit {
       },
     });
   }
+
+  goToCreate() {
+    this.router.navigate(['/catalogo/create']);
+  }
 }
